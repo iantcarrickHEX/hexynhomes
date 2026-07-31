@@ -11,15 +11,21 @@
 <meta property="og:description" content="Fully furnished 3-bed townhome in Greenville, NC. Utilities included, two-month minimum, pets welcome.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://hexynhomes.com/">
+<meta property="og:image" content="https://hexynhomes.com/img/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Front exterior of the furnished HexynHomes townhome in Greenville, North Carolina">
+<meta property="og:site_name" content="HexynHomes">
+<link rel="canonical" href="https://hexynhomes.com/">
 
 <link rel="icon" href="/img/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
-<meta property="og:image" content="https://hexynhomes.com/img/living-room.jpg">
 <meta name="twitter:card" content="summary_large_image">
 
+<link rel="preload" as="image" href="/img/exterior.jpg" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono&display=swap" rel="stylesheet">
@@ -37,6 +43,9 @@
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--navy);color:var(--paper);font-family:var(--body);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
 .wrap{max-width:var(--wrap);margin:0 auto;padding:0 28px}
+section[id]{scroll-margin-top:88px}
+.skip{position:absolute;left:-9999px;top:0;background:var(--gold);color:var(--ink);padding:12px 18px;z-index:100;font-family:var(--display);font-weight:600;border-radius:0 0 2px 0}
+.skip:focus{left:0}
 .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin:0 0 16px}
 h1,h2,h3{font-family:var(--display);letter-spacing:-.02em;margin:0}
 h1{font-size:clamp(33px,5.4vw,54px);font-weight:700;line-height:1.07}
@@ -57,6 +66,10 @@ img{max-width:100%;display:block}
 .hdr__in{display:flex;align-items:center;gap:18px;height:72px;max-width:var(--wrap);margin:0 auto;padding:0 28px}
 .hdr__logo{display:flex;align-items:center;flex:1;min-width:0}
 .hdr__logo svg{height:34px;width:auto}
+.nav{display:flex;gap:24px;font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase}
+.nav a{color:var(--slate);text-decoration:none;transition:color .2s ease}
+.nav a:hover{color:var(--gold-lt)}
+@media(max-width:880px){.nav{display:none}}
 
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:12px 22px;border-radius:2px;
   font-family:var(--display);font-weight:600;font-size:15px;text-decoration:none;background:var(--gold);color:var(--ink);
@@ -73,7 +86,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold-lt);outline-of
 .hero__pat{position:absolute;inset:-100px;opacity:.19;pointer-events:none}
 .hero>.wrap{position:relative}
 .hero__lede{margin:20px 0 0;font-size:clamp(18px,2.1vw,20px);color:var(--slate);max-width:56ch}
-.hero__cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.ctarow{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
 
 /* featured property */
 .feat{background:var(--paper);color:var(--navy);padding:74px 0}
@@ -158,7 +171,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold-lt);outline-of
   .hero{padding:54px 0 48px}
   .feat,.land{padding:54px 0}
   .specs{grid-template-columns:1fr}
-  .hero__cta .btn,.card__cta .btn{flex:1 1 100%}
+  .ctarow .btn,.card__cta .btn{flex:1 1 100%}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
@@ -166,6 +179,36 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold-lt);outline-of
   .btn:hover{transform:none}
 }
 </style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"Organization","@id":"https://hexynhomes.com/#org","name":"HexynHomes",
+ "url":"https://hexynhomes.com/","logo":"https://hexynhomes.com/img/icon-512.png",
+ "email":"hello@hexyntech.com","telephone":"+1-984-664-3350",
+ "description":"Furnished monthly rentals in North Carolina for travel nurses and traveling professionals.",
+ "areaServed":{"@type":"State","name":"North Carolina"}},
+{"@type":"WebSite","@id":"https://hexynhomes.com/#website","url":"https://hexynhomes.com/",
+ "name":"HexynHomes","publisher":{"@id":"https://hexynhomes.com/#org"}},
+{"@type":"House","@id":"https://hexynhomes.com/#townhome",
+ "name":"Fully furnished 3-bedroom townhome near ECU Health, Greenville NC",
+ "url":"https://hexynhomes.com/#greenville",
+ "image":["https://hexynhomes.com/img/exterior.jpg","https://hexynhomes.com/img/living-room.jpg","https://hexynhomes.com/img/dining-room.jpg"],
+ "address":{"@type":"PostalAddress","addressLocality":"Greenville","addressRegion":"NC","addressCountry":"US"},
+ "numberOfRooms":3,"numberOfBathroomsTotal":2.5,
+ "floorSize":{"@type":"QuantitativeValue","value":1900,"unitCode":"FTK"},
+ "petsAllowed":true,"smokingAllowed":false,
+ "occupancy":{"@type":"QuantitativeValue","maxValue":6},
+ "amenityFeature":[
+  {"@type":"LocationFeatureSpecification","name":"Utilities included","value":true},
+  {"@type":"LocationFeatureSpecification","name":"Washer and dryer","value":true},
+  {"@type":"LocationFeatureSpecification","name":"Fully furnished","value":true},
+  {"@type":"LocationFeatureSpecification","name":"Attached garage","value":true},
+  {"@type":"LocationFeatureSpecification","name":"Air conditioning","value":true}]},
+{"@type":"Offer","url":"https://hexynhomes.com/#greenville","price":"2250","priceCurrency":"USD",
+ "availability":"https://schema.org/InStock","itemOffered":{"@id":"https://hexynhomes.com/#townhome"},
+ "eligibleDuration":{"@type":"QuantitativeValue","minValue":2,"unitCode":"MON"},
+ "seller":{"@id":"https://hexynhomes.com/#org"}}
+]}
+</script>
 </head>
 <body>
 
@@ -185,6 +228,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold-lt);outline-of
   </g>
 </defs></svg>
 
+<a class="skip" href="#greenville">Skip to the listing</a>
 <header class="hdr">
   <div class="hdr__in">
     <a class="hdr__logo" href="#top" aria-label="HexynHomes home">
@@ -197,6 +241,11 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold-lt);outline-of
         <use href="#hh-wordmark" transform="translate(190,60) scale(0.55)" color="#EDF1F5"/>
       </svg>
     </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#greenville">The house</a>
+      <a href="#land">Land</a>
+      <a href="#contact">Contact</a>
+    </nav>
     <a class="btn" href="tel:+19846643350">Call or text</a>
   </div>
 </header>
@@ -209,7 +258,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold-lt);outline-of
       <p class="eyebrow">Furnished monthly rentals · North Carolina</p>
       <h1>A furnished place to land,<br>for however long the contract runs.</h1>
       <p class="hero__lede">Fully furnished, utilities included, two-month minimum. Made for travel nurses, traveling clinicians, and anyone who needs a real home for a short assignment — not a hotel and not a year-long lease.</p>
-      <div class="hero__cta">
+      <div class="ctarow">
         <a class="btn" href="#greenville">See the Greenville home</a>
         <a class="btn btn--ghost" href="tel:+19846643350">Call or text (984) 664-3350</a>
       </div>
@@ -221,7 +270,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold-lt);outline-of
       <div class="feat__head">
         <div>
           <p class="eyebrow">Available now</p>
-          <h2>Fox Den townhome, Greenville</h2>
+          <h2>Furnished 3-bedroom townhome in Greenville, NC</h2>
         </div>
       </div>
 
@@ -229,15 +278,15 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold-lt);outline-of
 
         <div>
           <div class="gal__main">
-            <img id="galMain" src="img/living-room.jpg" width="1200" height="1600"
-                 alt="Living room with cathedral ceilings and electric fireplace">
+            <img id="galMain" src="img/exterior.jpg" width="1200" height="900" fetchpriority="high"
+                 alt="Front exterior of the furnished HexynHomes townhome in Greenville, North Carolina">
           </div>
           <div class="gal__strip">
-            <button class="gal__thumb" aria-current="true" data-full="img/living-room.jpg" data-alt="Living room with cathedral ceilings and electric fireplace"><img src="img/living-room-thumb.jpg" width="500" height="500" loading="lazy" alt="Living room with cathedral ceilings and electric fireplace"></button>
-            <button class="gal__thumb" data-full="img/exterior.jpg" data-alt="Front exterior of the townhome with attached garage"><img src="img/exterior-thumb.jpg" width="500" height="500" loading="lazy" alt="Front exterior of the townhome with attached garage"></button>
+            <button class="gal__thumb" aria-current="true" data-full="img/exterior.jpg" data-alt="Front exterior of the furnished townhome in Greenville, North Carolina with attached garage"><img src="img/exterior-thumb.jpg" width="500" height="500" loading="lazy" alt="Front exterior of the furnished townhome in Greenville, North Carolina with attached garage"></button>
+            <button class="gal__thumb" data-full="img/living-room.jpg" data-alt="Furnished living room with cathedral ceilings, sectional sofa and electric fireplace"><img src="img/living-room-thumb.jpg" width="500" height="500" loading="lazy" alt="Furnished living room with cathedral ceilings, sectional sofa and electric fireplace"></button>
             <button class="gal__thumb" data-full="img/dining-room.jpg" data-alt="Dining room seating six"><img src="img/dining-room-thumb.jpg" width="500" height="500" loading="lazy" alt="Dining room seating six"></button>
             <button class="gal__thumb" data-full="img/bathroom.jpg" data-alt="Full bathroom with tub and shower"><img src="img/bathroom-thumb.jpg" width="500" height="500" loading="lazy" alt="Full bathroom with tub and shower"></button>
-            <button class="gal__thumb" data-full="img/bonus-room.jpg" data-alt="Upstairs bonus room"><img src="img/bonus-room-thumb.jpg" width="500" height="500" loading="lazy" alt="Upstairs bonus room"></button>
+            <button class="gal__thumb" data-full="img/bonus-room.jpg" data-alt="Upstairs bonus room with desk and seating"><img src="img/bonus-room-thumb.jpg" width="500" height="500" loading="lazy" alt="Upstairs bonus room with desk and seating"></button>
             <button class="gal__thumb" data-full="img/entry.jpg" data-alt="Entry hallway"><img src="img/entry-thumb.jpg" width="500" height="500" loading="lazy" alt="Entry hallway"></button>
             <button class="gal__thumb" data-full="img/stairs.jpg" data-alt="Staircase to the second floor"><img src="img/stairs-thumb.jpg" width="500" height="500" loading="lazy" alt="Staircase to the second floor"></button>
             <button class="gal__thumb" data-full="img/laundry.jpg" data-alt="Laundry room with full-size washer and dryer"><img src="img/laundry-thumb.jpg" width="500" height="500" loading="lazy" alt="Laundry room with full-size washer and dryer"></button>
@@ -310,7 +359,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold-lt);outline-of
         <ul class="land__towns">
           <li>Cary</li><li>Apex</li><li>Raleigh</li>
         </ul>
-        <div class="hero__cta">
+        <div class="ctarow">
           <a class="btn btn--ghost" href="tel:+19846643350">Talk to us about land</a>
         </div>
       </div>
