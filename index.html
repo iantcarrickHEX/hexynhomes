@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HexynHomes — Furnished Monthly Rentals near ECU Health, Greenville NC</title>
+<meta name="description" content="Fully furnished 3-bedroom townhome in Greenville, NC, minutes from ECU Health Medical Center and East Carolina University. Utilities included, two-month minimum. Built for travel nurses and traveling clinicians.">
+<meta name="theme-color" content="#0B3A5C">
+
+<meta property="og:title" content="HexynHomes — Furnished Monthly Rentals near ECU Health">
+<meta property="og:description" content="Fully furnished 3-bed townhome in Greenville, NC. Utilities included, two-month minimum, pets welcome.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://hexynhomes.com/">
+
+<link rel="icon" href="/img/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta property="og:image" content="https://hexynhomes.com/img/living-room.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --deep:#06263D; --navy:#0B3A5C; --panel:#12496F; --line:#3C7FA8;
+  --gold:#E7AC18; --gold-lt:#F8C73D; --slate:#9FB9CC; --paper:#EDF1F5; --ink:#231602;
+  --display:'Sora',system-ui,sans-serif;
+  --body:'IBM Plex Sans',system-ui,sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,monospace;
+  --wrap:1100px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--navy);color:var(--paper);font-family:var(--body);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 28px}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin:0 0 16px}
+h1,h2,h3{font-family:var(--display);letter-spacing:-.02em;margin:0}
+h1{font-size:clamp(33px,5.4vw,54px);font-weight:700;line-height:1.07}
+h2{font-size:clamp(25px,3.4vw,36px);font-weight:700;line-height:1.16}
+h3{font-size:18px;font-weight:600;letter-spacing:-.01em}
+img{max-width:100%;display:block}
+
+.honeybg{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='346' height='600'%3E%3Cpath d='M173 0 0 100 0 300 173 400 346 300 346 100Z M0 300-173 400-173 600 0 700 173 600 173 400Z M346 300 173 400 173 600 346 700 519 600 519 400Z' fill='none' stroke='%233C7FA8' stroke-width='4'/%3E%3C/svg%3E");
+  background-size:84px 146px;background-repeat:repeat}
+
+/* header */
+.hdr{position:sticky;top:0;z-index:50;background:rgba(11,58,92,.86);backdrop-filter:blur(18px) saturate(150%);-webkit-backdrop-filter:blur(18px) saturate(150%);border-bottom:1px solid rgba(237,241,245,.1)}
+.hdr::after{content:"";position:absolute;left:0;bottom:-1px;height:2px;width:100%;background:linear-gradient(90deg,#B46A11,var(--gold) 45%,var(--gold-lt));transform:scaleX(0);transform-origin:left}
+@supports (animation-timeline:scroll()){
+  @keyframes prog{to{transform:scaleX(1)}}
+  .hdr::after{animation:prog linear both;animation-timeline:scroll(root);animation-range:0 100%}
+}
+.hdr__in{display:flex;align-items:center;gap:18px;height:72px;max-width:var(--wrap);margin:0 auto;padding:0 28px}
+.hdr__logo{display:flex;align-items:center;flex:1;min-width:0}
+.hdr__logo svg{height:34px;width:auto}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:12px 22px;border-radius:2px;
+  font-family:var(--display);font-weight:600;font-size:15px;text-decoration:none;background:var(--gold);color:var(--ink);
+  border:1px solid transparent;transition:background .22s ease,transform .22s ease}
+.btn:hover{background:var(--gold-lt);transform:translateY(-2px)}
+.btn--ghost{background:transparent;color:var(--paper);border-color:rgba(237,241,245,.32)}
+.btn--ghost:hover{background:transparent;border-color:var(--paper)}
+.btn--dark{background:var(--navy);color:var(--paper)}
+.btn--dark:hover{background:var(--panel)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--gold-lt);outline-offset:3px}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:76px 0 64px}
+.hero__pat{position:absolute;inset:-100px;opacity:.19;pointer-events:none}
+.hero>.wrap{position:relative}
+.hero__lede{margin:20px 0 0;font-size:clamp(18px,2.1vw,20px);color:var(--slate);max-width:56ch}
+.hero__cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+
+/* featured property */
+.feat{background:var(--paper);color:var(--navy);padding:74px 0}
+.feat .eyebrow{color:var(--line)}
+.feat h2{color:var(--navy)}
+.feat__head{display:flex;flex-wrap:wrap;gap:14px;align-items:baseline;justify-content:space-between}
+.feat__grid{display:grid;grid-template-columns:1.15fr .85fr;gap:38px;margin-top:34px;align-items:start}
+
+.gal__main{aspect-ratio:4/3;background:#D3DDE6;border-radius:3px;overflow:hidden}
+.gal__main img{width:100%;height:100%;object-fit:cover}
+.gal__strip{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin-top:9px}
+.gal__thumb{aspect-ratio:1;background:#D3DDE6;border:2px solid transparent;border-radius:2px;overflow:hidden;padding:0;cursor:pointer}
+.gal__thumb img{width:100%;height:100%;object-fit:cover}
+.gal__thumb[aria-current="true"]{border-color:var(--gold)}
+
+.card__top{display:flex;gap:16px;align-items:center}
+.card__hex{flex:none;width:64px;height:74px;display:grid;place-items:center;
+  clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);
+  background:var(--gold);color:var(--navy);font-family:var(--display);font-weight:700;font-size:16px}
+.card__loc{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--line);margin:0 0 5px}
+.card__name{font-family:var(--display);font-weight:700;font-size:23px;color:var(--navy);margin:0;letter-spacing:-.01em}
+.price{margin:22px 0 0;font-family:var(--display);font-weight:700;font-size:40px;color:var(--navy);letter-spacing:-.02em}
+.price span{font-size:15px;font-weight:400;color:#5E7D95}
+.price em{display:block;font-style:normal;font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--line);margin-top:4px}
+
+.specs{list-style:none;margin:22px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(11,58,92,.14);border:1px solid rgba(11,58,92,.14);border-radius:3px;overflow:hidden}
+.specs li{background:#fff;padding:13px 15px}
+.specs dt{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:#5E7D95;margin:0}
+.specs dd{font-family:var(--display);font-weight:600;font-size:16px;color:var(--navy);margin:3px 0 0}
+
+.near{margin:22px 0 0;padding:16px 18px;background:#fff;border-left:3px solid var(--gold);border-radius:0 3px 3px 0}
+.near p{margin:0;font-family:var(--mono);font-size:12.5px;letter-spacing:.05em;color:#4A6B85;line-height:1.9}
+.near strong{color:var(--navy);font-family:var(--display);letter-spacing:0}
+
+.fees{margin:18px 0 0;font-family:var(--mono);font-size:12px;letter-spacing:.05em;color:#5E7D95;line-height:1.9}
+.card__cta{display:flex;flex-wrap:wrap;gap:11px;margin-top:24px}
+
+.incl{margin:48px 0 0;padding-top:34px;border-top:1px solid rgba(11,58,92,.14)}
+.incl h3{color:var(--navy);margin-bottom:16px}
+.chips{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.chips li{font-family:var(--mono);font-size:12px;letter-spacing:.07em;color:#3F5F78;background:#fff;border:1px solid rgba(11,58,92,.16);padding:8px 13px;border-radius:2px}
+.feat__more{margin:30px 0 0;font-family:var(--mono);font-size:12.5px;letter-spacing:.05em;color:#5E7D95}
+
+/* land */
+.land{position:relative;overflow:hidden;background:var(--panel);padding:70px 0}
+.land__pat{position:absolute;inset:-100px;opacity:.22;pointer-events:none}
+.land>.wrap{position:relative}
+.land__grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.land p{color:#C6D9E6;margin:16px 0 0;max-width:52ch}
+.land__towns{list-style:none;margin:24px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:9px}
+.land__towns li{font-family:var(--display);font-weight:600;font-size:15px;color:var(--navy);background:var(--gold);padding:9px 17px;border-radius:2px}
+.land__acre{display:grid;place-items:center;width:210px;height:242px;margin:0 auto;
+  clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);background:rgba(6,38,61,.55);border:0}
+.land__acre b{font-family:var(--display);font-weight:700;font-size:58px;color:var(--gold);line-height:1;letter-spacing:-.03em}
+.land__acre span{font-family:var(--mono);font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--slate);margin-top:8px}
+
+/* contact */
+.contact{background:var(--gold);color:var(--ink);padding:68px 0}
+.contact .eyebrow{color:rgba(35,22,2,.72)}
+.contact h2{color:var(--ink);max-width:22ch}
+.contact__row{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:24px;margin-top:28px}
+.contact__tel{font-family:var(--display);font-weight:700;font-size:clamp(33px,6.2vw,56px);letter-spacing:-.02em;color:var(--ink);text-decoration:none;display:inline-block}
+.contact__tel:hover{text-decoration:underline;text-underline-offset:6px}
+.contact__who{font-family:var(--mono);font-size:12.5px;letter-spacing:.1em;color:rgba(35,22,2,.78);margin:8px 0 0}
+.contact__mail{font-family:var(--display);font-weight:600;font-size:17px;color:var(--ink)}
+
+/* footer */
+.ftr{background:var(--deep);padding:38px 0;font-family:var(--mono);font-size:12px;letter-spacing:.08em;color:var(--slate)}
+.ftr__in{display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:center}
+.ftr a{color:var(--slate);text-decoration:none}
+.ftr a:hover{color:var(--gold-lt)}
+
+@media (max-width:900px){
+  .feat__grid,.land__grid{grid-template-columns:1fr;gap:30px}
+  .land__acre{width:180px;height:208px}
+}
+@media (max-width:620px){
+  .hdr__in{height:64px;padding:0 20px}
+  .hdr__logo svg{height:28px}
+  .hdr .btn{padding:10px 15px;font-size:13.5px}
+  .wrap{padding:0 20px}
+  .hero{padding:54px 0 48px}
+  .feat,.land{padding:54px 0}
+  .specs{grid-template-columns:1fr}
+  .hero__cta .btn,.card__cta .btn{flex:1 1 100%}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{animation:none!important;transition:none!important}
+  .btn:hover{transform:none}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <g id="hh-wordmark" fill="currentColor">
+    <path d="M0 0 H18 V41 H58 V0 H76 V100 H58 V59 H18 V100 H0 Z"/>
+    <path transform="translate(90,0)"  d="M0 0 H68 V18 H18 V41 H60 V59 H18 V82 H68 V100 H0 Z"/>
+    <path transform="translate(172,0)" d="M0 0 L20 0 L40 33 L60 0 L80 0 L50 50 L80 100 L60 100 L40 67 L20 100 L0 100 L30 50 Z"/>
+    <path transform="translate(266,0)" d="M0 0 L20 0 L40 33 L60 0 L80 0 L49 52 L49 100 L31 100 L31 52 Z"/>
+    <path transform="translate(360,0)" d="M0 0 L18 0 L60 68 L60 0 L78 0 L78 100 L60 100 L18 32 L18 100 L0 100 Z"/>
+    <path transform="translate(452,0)" d="M0 0 H18 V41 H58 V0 H76 V100 H58 V59 H18 V100 H0 Z"/>
+    <path transform="translate(542,0)" fill-rule="evenodd" d="M0 50 A46 50 0 1 1 92 50 A46 50 0 1 1 0 50 Z M18 50 A28 32 0 1 0 74 50 A28 32 0 1 0 18 50 Z"/>
+    <path transform="translate(648,0)" d="M0 0 L24 0 L52 40 L80 0 L104 0 L104 100 L86 100 L86 32 L59 70 L45 70 L18 32 L18 100 L0 100 Z"/>
+    <path transform="translate(766,0)" d="M0 0 H68 V18 H18 V41 H60 V59 H18 V82 H68 V100 H0 Z"/>
+    <path transform="translate(848,0)" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="butt"
+          d="M59 26 C59 15 48 9 34 9 C20 9 9 17 9 28 C9 39 19 45 34 48 C49 51 59 58 59 72 C59 84 48 91 34 91 C20 91 9 85 9 74"/>
+  </g>
+</defs></svg>
+
+<header class="hdr">
+  <div class="hdr__in">
+    <a class="hdr__logo" href="#top" aria-label="HexynHomes home">
+      <svg viewBox="0 0 720 180" role="img" aria-label="HexynHomes">
+        <g transform="translate(0,5) scale(1.25)" color="#E7AC18">
+          <path d="M26 12 L42 12 L42 29 L26 42 Z" fill="currentColor"/>
+          <path d="M12 122 L12 48 L60 10 L108 48 L108 122" fill="none" stroke="currentColor" stroke-width="8" stroke-linejoin="miter"/>
+          <path fill="#E7AC18" fill-rule="evenodd" d="M60 44 L91 62 L91 98 L60 116 L29 98 L29 62 Z M46 66 L54 66 L54 76 L66 76 L66 66 L74 66 L74 94 L66 94 L66 84 L54 84 L54 94 L46 94 Z"/>
+        </g>
+        <use href="#hh-wordmark" transform="translate(190,60) scale(0.55)" color="#EDF1F5"/>
+      </svg>
+    </a>
+    <a class="btn" href="tel:+19846643350">Call or text</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="hero__pat honeybg" aria-hidden="true"></div>
+    <div class="wrap">
+      <p class="eyebrow">Furnished monthly rentals · North Carolina</p>
+      <h1>A furnished place to land,<br>for however long the contract runs.</h1>
+      <p class="hero__lede">Fully furnished, utilities included, two-month minimum. Made for travel nurses, traveling clinicians, and anyone who needs a real home for a short assignment — not a hotel and not a year-long lease.</p>
+      <div class="hero__cta">
+        <a class="btn" href="#greenville">See the Greenville home</a>
+        <a class="btn btn--ghost" href="tel:+19846643350">Call or text (984) 664-3350</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="feat" id="greenville">
+    <div class="wrap">
+      <div class="feat__head">
+        <div>
+          <p class="eyebrow">Available now</p>
+          <h2>Fox Den townhome, Greenville</h2>
+        </div>
+      </div>
+
+      <div class="feat__grid">
+
+        <div>
+          <div class="gal__main">
+            <img id="galMain" src="img/living-room.jpg" width="1200" height="1600"
+                 alt="Living room with cathedral ceilings and electric fireplace">
+          </div>
+          <div class="gal__strip">
+            <button class="gal__thumb" aria-current="true" data-full="img/living-room.jpg" data-alt="Living room with cathedral ceilings and electric fireplace"><img src="img/living-room-thumb.jpg" width="500" height="500" loading="lazy" alt="Living room with cathedral ceilings and electric fireplace"></button>
+            <button class="gal__thumb" data-full="img/exterior.jpg" data-alt="Front exterior of the townhome with attached garage"><img src="img/exterior-thumb.jpg" width="500" height="500" loading="lazy" alt="Front exterior of the townhome with attached garage"></button>
+            <button class="gal__thumb" data-full="img/dining-room.jpg" data-alt="Dining room seating six"><img src="img/dining-room-thumb.jpg" width="500" height="500" loading="lazy" alt="Dining room seating six"></button>
+            <button class="gal__thumb" data-full="img/bathroom.jpg" data-alt="Full bathroom with tub and shower"><img src="img/bathroom-thumb.jpg" width="500" height="500" loading="lazy" alt="Full bathroom with tub and shower"></button>
+            <button class="gal__thumb" data-full="img/bonus-room.jpg" data-alt="Upstairs bonus room"><img src="img/bonus-room-thumb.jpg" width="500" height="500" loading="lazy" alt="Upstairs bonus room"></button>
+            <button class="gal__thumb" data-full="img/entry.jpg" data-alt="Entry hallway"><img src="img/entry-thumb.jpg" width="500" height="500" loading="lazy" alt="Entry hallway"></button>
+            <button class="gal__thumb" data-full="img/stairs.jpg" data-alt="Staircase to the second floor"><img src="img/stairs-thumb.jpg" width="500" height="500" loading="lazy" alt="Staircase to the second floor"></button>
+            <button class="gal__thumb" data-full="img/laundry.jpg" data-alt="Laundry room with full-size washer and dryer"><img src="img/laundry-thumb.jpg" width="500" height="500" loading="lazy" alt="Laundry room with full-size washer and dryer"></button>
+          </div>
+        </div>
+
+        <div>
+          <div class="card__top">
+            <div class="card__hex" aria-hidden="true">3BR</div>
+            <div>
+              <p class="card__loc">Greenville, North Carolina</p>
+              <p class="card__name">Fully furnished townhome<br>near ECU Health</p>
+            </div>
+          </div>
+
+          <p class="price">$2,250<span> / month</span><em>Utilities included</em></p>
+
+          <ul class="specs">
+            <li><dt>Bedrooms</dt><dd>3 &middot; all queen</dd></li>
+            <li><dt>Bathrooms</dt><dd>2.5 private</dd></li>
+            <li><dt>Size</dt><dd>1,900 sq ft</dd></li>
+            <li><dt>Minimum stay</dt><dd>2 months</dd></li>
+            <li><dt>Pets</dt><dd>Welcome</dd></li>
+            <li><dt>Sleeps</dt><dd>Up to 6</dd></li>
+          </ul>
+
+          <div class="near">
+            <p><strong>ECU Health Medical Center</strong> — 4.7 miles<br>
+               <strong>Greenville Health Care Center</strong> — 5.1 miles<br>
+               <strong>Greenville Vet Center</strong> — 4.2 miles</p>
+          </div>
+
+          <p class="fees">Cleaning fee $200 · Refundable deposit $750 · Pet deposit $350 (non-refundable) · No smoking</p>
+
+          <div class="card__cta">
+            <a class="btn" href="tel:+19846643350">Call or text about dates</a>
+            <a class="btn btn--dark" href="https://www.furnishedfinder.com/property/883807_1" target="_blank" rel="noopener">View on Furnished Finder</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="incl">
+        <h3>What's already in the house</h3>
+        <ul class="chips">
+          <li>All utilities</li>
+          <li>Washer &amp; dryer</li>
+          <li>Kitchenware, bathware, linens</li>
+          <li>First-floor primary suite</li>
+          <li>Walk-in closet</li>
+          <li>Cathedral ceilings</li>
+          <li>Electric fireplace</li>
+          <li>Air conditioning &amp; heat</li>
+          <li>Attached garage</li>
+          <li>Upstairs bonus room</li>
+          <li>Storage</li>
+          <li>Parking for 3</li>
+        </ul>
+        <p class="feat__more">One home today. More coming — call if you need something we haven't listed yet.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="land" id="land">
+    <div class="land__pat honeybg" aria-hidden="true"></div>
+    <div class="wrap land__grid">
+      <div>
+        <p class="eyebrow">What we're looking for next</p>
+        <h2>Six acres in the Triangle.</h2>
+        <p>We're actively looking to buy roughly six acres in Cary, Apex, or Raleigh for our next build. If you own land there, or you're an agent sitting on something that hasn't hit the market, we'd rather hear from you directly than bid against a crowd.</p>
+        <ul class="land__towns">
+          <li>Cary</li><li>Apex</li><li>Raleigh</li>
+        </ul>
+        <div class="hero__cta">
+          <a class="btn btn--ghost" href="tel:+19846643350">Talk to us about land</a>
+        </div>
+      </div>
+      <div>
+        <div class="land__acre"><b>~6</b><span>Acres wanted</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <p class="eyebrow">Get in touch</p>
+      <h2>Ask about dates, or about land.</h2>
+      <div class="contact__row">
+        <div>
+          <a class="contact__tel" href="tel:+19846643350">(984) 664-3350</a>
+          <p class="contact__who">IAN CARRICK · OWNER</p>
+        </div>
+        <div>
+          <a class="contact__mail" href="mailto:hello@hexyntech.com">hello@hexyntech.com</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="ftr">
+  <div class="wrap ftr__in">
+    <span>© <span id="yr">2026</span> HEXYNHOMES · NORTH CAROLINA</span>
+    <span>EQUAL HOUSING OPPORTUNITY</span>
+    <span><a href="tel:+19846643350">(984) 664-3350</a></span>
+  </div>
+</footer>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+const main = document.getElementById('galMain');
+document.querySelectorAll('.gal__thumb').forEach(function(t){
+  t.addEventListener('click', function(){
+    main.src = t.dataset.full;
+    main.alt = t.dataset.alt;
+    document.querySelectorAll('.gal__thumb').forEach(function(o){ o.setAttribute('aria-current','false'); });
+    t.setAttribute('aria-current','true');
+  });
+});
+</script>
+</body>
+</html>
